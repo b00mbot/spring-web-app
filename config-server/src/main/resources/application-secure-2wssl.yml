@@ -1,0 +1,21 @@
+### PROFILE: Secure 2 way SSL ###
+server:
+  port: 8888
+  ssl:
+    enabled: true
+    key-store: 'classpath:keystores/keystore.jks'
+    key-store-type: JKS
+    key-store-password: password
+    key-alias: test
+    key-password: password
+    trust-store: 'classpath:keystores/truststore.jks'
+    trust-store-type: JKS
+    trust-store-password: password
+    client-auth: need
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: ~
+          search-paths: '{application}'
