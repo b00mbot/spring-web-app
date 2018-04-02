@@ -109,7 +109,7 @@ public class CustomConfigServiceBootstrapConfig {
             }
 
         } catch (NoSuchAlgorithmException | KeyStoreException | UnrecoverableKeyException | CertificateException | IOException | KeyManagementException e) {
-            e.printStackTrace();
+            throw new IllegalStateException("Keystore and/or truststore could not be loaded. Please check that the configurations are set up correctly.", e);
         }
 
     }
