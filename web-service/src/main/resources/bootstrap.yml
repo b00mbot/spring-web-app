@@ -4,16 +4,5 @@ spring:
   cloud:
     config:
       uri: ~
-      enabled: true
+      enabled: false
       label: master
-
-custom:
-  ssl:
-    enabled: true
-    keystore: 'classpath:keystores/keystore.jks'
-    keystore-password: password
-    key-alias: test
-    key-password: password
-    truststore: 'classpath:keystores/truststore.jks'
-    truststore-password: password
-    verify-hostname: false

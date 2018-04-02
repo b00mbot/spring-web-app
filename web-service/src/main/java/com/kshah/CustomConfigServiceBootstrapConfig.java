@@ -11,6 +11,7 @@ import org.springframework.cloud.config.client.ConfigServicePropertySourceLocato
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.Resource;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
@@ -24,6 +25,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.UnrecoverableKeyException;
 import java.security.cert.CertificateException;
 
+@Profile("custom")
 @Configuration
 public class CustomConfigServiceBootstrapConfig {
 
